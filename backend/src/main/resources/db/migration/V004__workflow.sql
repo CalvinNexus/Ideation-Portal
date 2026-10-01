@@ -1,0 +1,1 @@
+-- Migration placeholder: implement entities described in the guide.

@@ -1,0 +1,1 @@
+// Reusable PermissionGate component.

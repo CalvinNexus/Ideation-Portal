@@ -1,0 +1,409 @@
+URA IDEATION PORTAL - PROJECT FILE STRUCTURE
+
+├── .github
+│   └── workflows
+│       ├── backend-ci.yml
+│       ├── e2e.yml
+│       └── frontend-ci.yml
+├── backend
+│   ├── src
+│   │   ├── main
+│   │   │   ├── java
+│   │   │   │   └── ideation
+│   │   │   │                   ├── administration
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   ├── dto
+│   │   │   │                   │   │   └── AdministrationResource.java
+│   │   │   │                   │   ├── application
+│   │   │   │                   │   │   └── ConfigurationService.java
+│   │   │   │                   │   ├── domain
+│   │   │   │                   │   │   └── ConfigVersion.java
+│   │   │   │                   │   ├── infrastructure
+│   │   │   │                   │   │   └── AdministrationRepository.java
+│   │   │   │                   │   └── validation
+│   │   │   │                   │       └── AdministrationValidator.java
+│   │   │   │                   ├── audit
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   ├── dto
+│   │   │   │                   │   │   └── AuditResource.java
+│   │   │   │                   │   ├── application
+│   │   │   │                   │   │   └── AuditQueryService.java
+│   │   │   │                   │   ├── domain
+│   │   │   │                   │   │   └── AuditEvent.java
+│   │   │   │                   │   ├── infrastructure
+│   │   │   │                   │   │   └── AuditRepository.java
+│   │   │   │                   │   └── validation
+│   │   │   │                   │       └── AuditValidator.java
+│   │   │   │                   ├── committee
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   ├── dto
+│   │   │   │                   │   │   └── CommitteeResource.java
+│   │   │   │                   │   ├── application
+│   │   │   │                   │   │   └── CommitteeService.java
+│   │   │   │                   │   ├── domain
+│   │   │   │                   │   │   └── Committee.java
+│   │   │   │                   │   ├── infrastructure
+│   │   │   │                   │   │   └── CommitteeRepository.java
+│   │   │   │                   │   └── validation
+│   │   │   │                   │       └── CommitteeValidator.java
+│   │   │   │                   ├── community
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   ├── dto
+│   │   │   │                   │   │   └── CommunityResource.java
+│   │   │   │                   │   ├── application
+│   │   │   │                   │   │   └── CommunityService.java
+│   │   │   │                   │   ├── domain
+│   │   │   │                   │   │   └── CommunityVote.java
+│   │   │   │                   │   ├── infrastructure
+│   │   │   │                   │   │   └── CommunityRepository.java
+│   │   │   │                   │   └── validation
+│   │   │   │                   │       └── CommunityValidator.java
+│   │   │   │                   ├── ea
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   ├── dto
+│   │   │   │                   │   │   └── EaResource.java
+│   │   │   │                   │   ├── application
+│   │   │   │                   │   │   └── EaAssessmentService.java
+│   │   │   │                   │   ├── domain
+│   │   │   │                   │   │   └── EaAssessment.java
+│   │   │   │                   │   ├── infrastructure
+│   │   │   │                   │   │   └── EaRepository.java
+│   │   │   │                   │   └── validation
+│   │   │   │                   │       └── EaValidator.java
+│   │   │   │                   ├── evaluation
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   ├── dto
+│   │   │   │                   │   │   └── ReviewResource.java
+│   │   │   │                   │   ├── application
+│   │   │   │                   │   │   └── ReviewService.java
+│   │   │   │                   │   ├── domain
+│   │   │   │                   │   │   └── Review.java
+│   │   │   │                   │   ├── infrastructure
+│   │   │   │                   │   │   └── EvaluationRepository.java
+│   │   │   │                   │   └── validation
+│   │   │   │                   │       └── EvaluationValidator.java
+│   │   │   │                   ├── ideas
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   ├── dto
+│   │   │   │                   │   │   └── IdeaResource.java
+│   │   │   │                   │   ├── application
+│   │   │   │                   │   │   ├── IdeaCommandService.java
+│   │   │   │                   │   │   ├── IdeaQueryService.java
+│   │   │   │                   │   │   └── IdeaSubmissionService.java
+│   │   │   │                   │   ├── domain
+│   │   │   │                   │   │   ├── Idea.java
+│   │   │   │                   │   │   ├── IdeaPolicy.java
+│   │   │   │                   │   │   ├── IdeaStatus.java
+│   │   │   │                   │   │   └── IdeaVersion.java
+│   │   │   │                   │   ├── infrastructure
+│   │   │   │                   │   │   ├── IdeaMapper.java
+│   │   │   │                   │   │   ├── IdeaRepository.java
+│   │   │   │                   │   │   └── IdeasRepository.java
+│   │   │   │                   │   └── validation
+│   │   │   │                   │       ├── DuplicateIdeaDetector.java
+│   │   │   │                   │       ├── IdeasValidator.java
+│   │   │   │                   │       └── IdeaValidator.java
+│   │   │   │                   ├── identity
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   ├── dto
+│   │   │   │                   │   │   └── IdentityResource.java
+│   │   │   │                   │   ├── application
+│   │   │   │                   │   │   └── IdentityService.java
+│   │   │   │                   │   ├── domain
+│   │   │   │                   │   │   └── User.java
+│   │   │   │                   │   ├── infrastructure
+│   │   │   │                   │   │   └── IdentityRepository.java
+│   │   │   │                   │   └── validation
+│   │   │   │                   │       └── IdentityValidator.java
+│   │   │   │                   ├── lifecycle
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   ├── dto
+│   │   │   │                   │   │   └── LifecycleResource.java
+│   │   │   │                   │   ├── application
+│   │   │   │                   │   │   └── LifecycleService.java
+│   │   │   │                   │   ├── domain
+│   │   │   │                   │   │   └── ImplementationProject.java
+│   │   │   │                   │   ├── infrastructure
+│   │   │   │                   │   │   └── LifecycleRepository.java
+│   │   │   │                   │   └── validation
+│   │   │   │                   │       └── LifecycleValidator.java
+│   │   │   │                   ├── moderation
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   ├── dto
+│   │   │   │                   │   │   └── ModerationResource.java
+│   │   │   │                   │   ├── application
+│   │   │   │                   │   │   └── ModerationService.java
+│   │   │   │                   │   ├── domain
+│   │   │   │                   │   │   └── ModerationTask.java
+│   │   │   │                   │   ├── infrastructure
+│   │   │   │                   │   │   └── ModerationRepository.java
+│   │   │   │                   │   └── validation
+│   │   │   │                   │       └── ModerationValidator.java
+│   │   │   │                   ├── notifications
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   ├── dto
+│   │   │   │                   │   │   └── NotificationResource.java
+│   │   │   │                   │   ├── application
+│   │   │   │                   │   │   └── NotificationService.java
+│   │   │   │                   │   ├── domain
+│   │   │   │                   │   │   └── Notification.java
+│   │   │   │                   │   ├── infrastructure
+│   │   │   │                   │   │   └── NotificationsRepository.java
+│   │   │   │                   │   └── validation
+│   │   │   │                   │       └── NotificationsValidator.java
+│   │   │   │                   ├── reporting
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   ├── dto
+│   │   │   │                   │   │   └── ReportResource.java
+│   │   │   │                   │   ├── application
+│   │   │   │                   │   │   └── ReportService.java
+│   │   │   │                   │   ├── domain
+│   │   │   │                   │   │   └── Report.java
+│   │   │   │                   │   ├── infrastructure
+│   │   │   │                   │   │   └── ReportingRepository.java
+│   │   │   │                   │   └── validation
+│   │   │   │                   │       └── ReportingValidator.java
+│   │   │   │                   ├── search
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   ├── dto
+│   │   │   │                   │   │   └── SearchResource.java
+│   │   │   │                   │   ├── application
+│   │   │   │                   │   │   └── SearchService.java
+│   │   │   │                   │   ├── domain
+│   │   │   │                   │   │   └── SavedSearch.java
+│   │   │   │                   │   ├── infrastructure
+│   │   │   │                   │   │   └── SearchRepository.java
+│   │   │   │                   │   └── validation
+│   │   │   │                   │       └── SearchValidator.java
+│   │   │   │                   ├── shared
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   └── ApiError.java
+│   │   │   │                   │   ├── audit
+│   │   │   │                   │   │   ├── AuditContext.java
+│   │   │   │                   │   │   └── AuditEventWriter.java
+│   │   │   │                   │   ├── exception
+│   │   │   │                   │   │   └── GlobalExceptionMapper.java
+│   │   │   │                   │   ├── integration
+│   │   │   │                   │   │   ├── EaIntegrationAdapter.java
+│   │   │   │                   │   │   └── IdentityProviderAdapter.java
+│   │   │   │                   │   ├── notification
+│   │   │   │                   │   │   ├── EmailNotificationAdapter.java
+│   │   │   │                   │   │   ├── NotificationPublisher.java
+│   │   │   │                   │   │   └── SmsNotificationAdapter.java
+│   │   │   │                   │   ├── search
+│   │   │   │                   │   │   └── SearchIndexService.java
+│   │   │   │                   │   ├── security
+│   │   │   │                   │   │   ├── AuthorizationService.java
+│   │   │   │                   │   │   └── CurrentUser.java
+│   │   │   │                   │   ├── storage
+│   │   │   │                   │   │   └── FileStorageAdapter.java
+│   │   │   │                   │   ├── validation
+│   │   │   │                   │   │   └── BusinessRuleGuard.java
+│   │   │   │                   │   └── workflow
+│   │   │   │                   │       ├── WorkflowEngine.java
+│   │   │   │                   │       └── WorkflowTransitionService.java
+│   │   │   │                   ├── showcase
+│   │   │   │                   │   ├── api
+│   │   │   │                   │   │   ├── dto
+│   │   │   │                   │   │   └── ShowcaseResource.java
+│   │   │   │                   │   ├── application
+│   │   │   │                   │   │   └── ShowcaseService.java
+│   │   │   │                   │   ├── domain
+│   │   │   │                   │   │   └── ShowcaseItem.java
+│   │   │   │                   │   ├── infrastructure
+│   │   │   │                   │   │   └── ShowcaseRepository.java
+│   │   │   │                   │   └── validation
+│   │   │   │                   │       └── ShowcaseValidator.java
+│   │   │   │                   └── workflowconfig
+│   │   │   │                       ├── api
+│   │   │   │                       │   ├── dto
+│   │   │   │                       │   └── WorkflowConfigResource.java
+│   │   │   │                       ├── application
+│   │   │   │                       │   └── WorkflowConfigService.java
+│   │   │   │                       ├── domain
+│   │   │   │                       │   └── WorkflowDefinition.java
+│   │   │   │                       ├── infrastructure
+│   │   │   │                       │   └── WorkflowconfigRepository.java
+│   │   │   │                       └── validation
+│   │   │   │                           └── WorkflowconfigValidator.java
+│   │   │   └── resources
+│   │   │       ├── db
+│   │   │       │   └── migration
+│   │   │       │       ├── V001__baseline.sql
+│   │   │       │       ├── V002__identity.sql
+│   │   │       │       ├── V003__ideas.sql
+│   │   │       │       ├── V004__workflow.sql
+│   │   │       │       ├── V005__audit.sql
+│   │   │       │       ├── V006__evaluation.sql
+│   │   │       │       ├── V007__committee.sql
+│   │   │       │       ├── V008__ea_lifecycle.sql
+│   │   │       │       ├── V009__community_showcase.sql
+│   │   │       │       ├── V010__notifications.sql
+│   │   │       │       ├── V011__reporting_search.sql
+│   │   │       │       └── V012__administration.sql
+│   │   │       ├── templates
+│   │   │       │   └── .gitkeep
+│   │   │       └── application.properties
+│   │   └── test
+│   │       ├── java
+│   │       │   └── ug
+│   │       │       └── go
+│   │       │           └── ura
+│   │       │               └── ideation
+│   │       │                   └── .gitkeep
+│   │       └── resources
+│   │           └── application.properties
+│   ├── Dockerfile
+│   ├── pom.xml
+│   └── README.md
+├── docs
+│   ├── api
+│   │   └── openapi.yaml
+│   ├── architecture
+│   │   ├── decisions
+│   │   │   └── ADR-001-modular-monolith.md
+│   │   ├── component.md
+│   │   ├── container.md
+│   │   ├── context.md
+│   │   ├── deployment.md
+│   │   └── security.md
+│   ├── database
+│   │   └── erd.md
+│   ├── deployment
+│   │   └── environments.md
+│   ├── requirements
+│   │   └── traceability-matrix.md
+│   ├── security
+│   │   └── rbac-matrix.md
+│   ├── testing
+│   │   └── test-strategy.md
+│   ├── workflows
+│   │   └── master-innovation-workflow.md
+│   └── implementation-map.md
+├── frontend
+│   ├── src
+│   │   ├── api
+│   │   │   ├── authApi.ts
+│   │   │   ├── httpClient.ts
+│   │   │   ├── ideasApi.ts
+│   │   │   ├── reportsApi.ts
+│   │   │   └── workflowApi.ts
+│   │   ├── app
+│   │   │   ├── error
+│   │   │   │   └── .gitkeep
+│   │   │   ├── permissions
+│   │   │   │   └── .gitkeep
+│   │   │   ├── providers
+│   │   │   │   └── .gitkeep
+│   │   │   ├── router
+│   │   │   │   └── .gitkeep
+│   │   │   └── store
+│   │   │       └── .gitkeep
+│   │   ├── components
+│   │   │   ├── ApprovalDialog
+│   │   │   │   └── ApprovalDialog.tsx
+│   │   │   ├── DataTable
+│   │   │   │   └── DataTable.tsx
+│   │   │   ├── FileUploader
+│   │   │   │   └── FileUploader.tsx
+│   │   │   ├── PermissionGate
+│   │   │   │   └── PermissionGate.tsx
+│   │   │   ├── ScoreCard
+│   │   │   │   └── ScoreCard.tsx
+│   │   │   ├── StatusBadge
+│   │   │   │   └── StatusBadge.tsx
+│   │   │   └── Timeline
+│   │   │       └── Timeline.tsx
+│   │   ├── features
+│   │   │   ├── administration
+│   │   │   │   ├── administrationApi.ts
+│   │   │   │   ├── administrationRoutes.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── audit
+│   │   │   │   ├── auditApi.ts
+│   │   │   │   ├── auditRoutes.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── auth
+│   │   │   │   ├── authApi.ts
+│   │   │   │   ├── authRoutes.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── committee
+│   │   │   │   ├── committeeApi.ts
+│   │   │   │   ├── committeeRoutes.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── community
+│   │   │   │   ├── communityApi.ts
+│   │   │   │   ├── communityRoutes.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── dashboard
+│   │   │   │   ├── dashboardApi.ts
+│   │   │   │   ├── dashboardRoutes.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── ea
+│   │   │   │   ├── eaApi.ts
+│   │   │   │   ├── eaRoutes.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── ideas
+│   │   │   │   ├── ideasApi.ts
+│   │   │   │   ├── ideasRoutes.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── lifecycle
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── lifecycleApi.ts
+│   │   │   │   └── lifecycleRoutes.tsx
+│   │   │   ├── moderation
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── moderationApi.ts
+│   │   │   │   └── moderationRoutes.tsx
+│   │   │   ├── notifications
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── notificationsApi.ts
+│   │   │   │   └── notificationsRoutes.tsx
+│   │   │   ├── reports
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── reportsApi.ts
+│   │   │   │   └── reportsRoutes.tsx
+│   │   │   ├── reviews
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── reviewsApi.ts
+│   │   │   │   └── reviewsRoutes.tsx
+│   │   │   ├── search
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── searchApi.ts
+│   │   │   │   └── searchRoutes.tsx
+│   │   │   ├── showcase
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── showcaseApi.ts
+│   │   │   │   └── showcaseRoutes.tsx
+│   │   │   └── workflow
+│   │   │       ├── index.ts
+│   │   │       ├── workflowApi.ts
+│   │   │       └── workflowRoutes.tsx
+│   │   ├── hooks
+│   │   │   └── .gitkeep
+│   │   ├── layouts
+│   │   │   └── .gitkeep
+│   │   ├── types
+│   │   │   └── .gitkeep
+│   │   └── utils
+│   │       └── .gitkeep
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── README.md
+│   ├── tsconfig.json
+│   └── vite.config.ts
+├── infra
+│   ├── backup
+│   │   └── README.md
+│   ├── monitoring
+│   │   └── README.md
+│   └── postgres
+│       └── init
+│           └── .gitkeep
+├── nginx
+│   └── default.conf
+├── .env.example
+├── docker-compose.dev.yml
+├── docker-compose.test.yml
+├── docker-compose.yml
+└── README.md
