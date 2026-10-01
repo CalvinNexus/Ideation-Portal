@@ -1,6 +1,0 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>ug.go.ura</groupId><artifactId>ura-ideation-portal-backend</artifactId><version>1.0.0-SNAPSHOT</version>
-  <!-- Add Quarkus REST, Hibernate ORM/Panache, PostgreSQL, Flyway, Security,
-       OpenAPI, Bean Validation, Scheduler and test dependencies. -->
-</project>
